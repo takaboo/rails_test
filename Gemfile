@@ -37,6 +37,15 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :development do
+  gem "capistrano", "3.1.0"
+  gem "capistrano-rails"
+  gem "capistrano-bundler"
+  gem "capistrano-rbenv"
+  gem "capistrano3-unicorn"
+  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+end
+
 group :production do
   gem 'unicorn'
 end
