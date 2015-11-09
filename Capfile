@@ -4,6 +4,8 @@ require 'capistrano/deploy'
 # rbenvを使用している場合
 require 'capistrano/rbenv'
 
+require 'capistrano/safe_deploy_to' 
+
 # デプロイ先のサーバで、ユーザディレクトリでrbenvをインストールしている場合
 set :rbenv_type, :user
 set :rbenv_ruby, '2.1.3'
