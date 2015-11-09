@@ -1,22 +1,11 @@
-# Simple Role Syntax
-# ==================
-# Supports bulk-adding hosts to roles, the primary
-# server in each group is considered to be the first
-# unless any hosts have the primary property set.
-# Don't declare `role :all`, it's a meta role
+set :rails_env, "production"
+set :unicorn_rack_env, "production"
+
 role :app, %w{kobayashi@153.126.204.200}
 role :web, %w{kobayashi@153.126.204.200}
 role :db,  %w{kobayashi@153.126.204.200}
 
-# Extended Server Syntax
-# ======================
-# This can be used to drop a more detailed server
-# definition into the server list. The second argument
-# something that quacks like a hash can be used to set
-# extended properties on the server.
-server '153.126.204.200', user: 'kobayashi', roles: %w{web app}, my_property: :my_value
-
-set :rails_env, :production
+server '153.126.204.200', user: 'kobayashi', roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
